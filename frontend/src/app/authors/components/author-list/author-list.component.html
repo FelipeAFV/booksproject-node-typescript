@@ -1,0 +1,27 @@
+
+<div class="table-container">
+    <div class="subcontainer">
+
+
+        <h2>Autores</h2>
+        <div class="actions">
+            <a href="/authorAdd">
+                <button class="button">
+                    Anadir autor
+                </button>
+            </a>
+        </div>
+        <table class="content-table">
+            <thead>
+                <th class="">Nombre</th>
+                <th class="">Nacionalidad</th>
+                <th  class="">Fecha de nacimiento</th>
+                <th *appCheckRole="['ADMIN']">Acciones</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let author of authors" app-author [author]="author"  (deleteEvent)="deleteAuthor($event)" >
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

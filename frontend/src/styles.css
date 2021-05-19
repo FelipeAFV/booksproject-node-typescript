@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('styles/table-styles.css');
+
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #85603f;
+    --main-color-trans: #85603f5f;
+    --secondary-color: #9e7540;
+    --secondary-color-trans: #9e75405f;
+    --tertiary-color: #e3d18a;
+    --tertiary-color-trans: #e3d18a6f;
+  }
+
+body {
+    margin:0;
+    padding: 0;
+    background-color: #f3f3f3ff;
+}
+
+h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.3em;
+}
+
+.button {
+    background-color: var(--tertiary-color-trans);
+    border-radius: 0.3em;
+    border: none;
+    padding: 0.6em;
+    font-weight: 500 ;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+

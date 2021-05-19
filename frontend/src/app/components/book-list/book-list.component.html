@@ -1,0 +1,17 @@
+
+
+<div class="table-container">
+    <h2>Buscador de libros</h2>
+    <table class="content-table">
+        <thead>
+            <th class="">ID</th>
+            <th class="">Título</th>
+            <th *appCheckRole="['ADMIN']" class="">Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of books" app-book [book]="book" (deleteEvent)="deleteBook($event)" 
+            (updateEvent)="goToUpdate($event)">
+            </tr>
+        </tbody>
+    </table>
+</div>

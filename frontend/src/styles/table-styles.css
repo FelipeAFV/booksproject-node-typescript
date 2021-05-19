@@ -1,0 +1,43 @@
+
+
+/* CSS FOR TABLE */
+
+.table-container {
+    margin: 50px auto;
+    width: 70%;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 60%;
+    font-size: 0.9em;
+    min-width: 500px;
+
+}
+
+.content-table thead th {
+    text-align: center;
+    background-color: var(--secondary-color-trans);
+    font-weight: 600;
+}
+.content-table td {
+    text-align: center;
+}
+
+.content-table th,
+.content-table td {
+    padding: 1em 1em;
+}
+
+.content-table tr {
+    border-bottom: solid 2px #b4b4b4;
+}
+
+.content-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tr:last-of-type {
+    border-bottom: solid 3px var(--secondary-color-trans);
+}

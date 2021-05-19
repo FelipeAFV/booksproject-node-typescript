@@ -1,0 +1,51 @@
+<!-- <nav class="navbar">
+
+      <div class="container" id="navbarNav">
+
+            <ul class="">
+              <li class="">
+                <a class="" href="/bookList">Books</a>
+              </li>
+              
+            </ul>
+            <ul class="">
+              <li class="">
+                <a class="" href="/login">Login</a>
+              </li>
+              <li class="">
+                <a class="" (click)="logout()">Logout</a>
+              </li>
+            </ul>
+        
+      </div> 
+</nav>
+<router-outlet></router-outlet> -->
+<nav class="navbar">
+    
+  <ul class="container">
+    <div class="subcontainer">
+
+      <li class="">
+        <a class="" href="/bookList">Books</a>
+      </li>
+      <li class="">
+        <a class="" *appCheckRole="['ADMIN']" href="/bookAdd">Añadir</a>
+      </li>
+      <li class="">
+        <a class=""  href="/authors">Autores</a>
+      </li>
+    </div>
+    
+    <div class="subcontainer">
+
+      <li class="">
+        <a class="" href="/login">Login</a>
+      </li>
+      <li class="">
+        <a class="" (click)="logout()">Logout</a>
+      </li>
+    </div>
+  </ul>
+        
+</nav>
+<router-outlet ></router-outlet>

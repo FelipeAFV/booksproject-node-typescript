@@ -1,0 +1,29 @@
+@import url('../../../styles/form-styles.css');
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 50px auto;
+    justify-content: space-around;
+}
+
+.form-element select {
+    width: 50%;
+    height: 2em;
+}
+
+.form-item {
+    margin: 10px;
+}
+
+textarea {
+    max-height: 200px;
+    max-width: 500px;
+    padding: 1.3em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.reseña {
+    justify-content: center;
+}

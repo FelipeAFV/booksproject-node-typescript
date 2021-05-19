@@ -1,0 +1,11 @@
+
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td *appCheckRole="['ADMIN']">
+        <div class="container">
+
+            <button class="button" (click)="delete()">Eliminar</button>
+            <button class="button" (click)="update()">Actualizar</button>
+        </div>
+    </td>
+            

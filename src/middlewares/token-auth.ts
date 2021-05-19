@@ -2,6 +2,9 @@ import { Request, Response, NextFunction } from "express";
 
 const jwt = require('jsonwebtoken');
 import DATA from "../data";
+import { PayloadData } from "../model/interfaces/token-payload";
+import jwtService from "../services/auth/jwt-service";
+import JwtService from "../services/auth/jwt-service";
 
 class AuthMiddleware {
 
@@ -12,18 +15,33 @@ class AuthMiddleware {
             console.log(JWT);
             // const userData = jwt.verify(JWT, config.TOKEN_SECRET);
 
-            jwt.verify(JWT, DATA.TOKEN_SECRET, (err:any, payload: any) => {
-                if (err) {
-                    res.status(403).json({message: 'Invalid token'});
-                } else {
-                    req.userInfo = payload;
+            jwtService.verifyToken(JWT)
+                .then( (payload: PayloadData | object) => {
+                    req.userInfo = <PayloadData> payload;
                     
                     console.log(req.userInfo);
                     console.log(`User athenticated ${req.userInfo}`);
                     req.username = req.userInfo.username;
                     next();
-                }
-            });
+                })
+                .catch((err) => {
+                    console.log(err);
+                    res.status(403).json({message: 'Invalid token'});
+                });
+
+
+            // jwt.verify(JWT, DATA.TOKEN_SECRET, (err:any, payload: PayloadData) => {
+            //     if (err) {
+            //         res.status(403).json({message: 'Invalid token'});
+            //     } else {
+            //         req.userInfo = payload;
+                    
+            //         console.log(req.userInfo);
+            //         console.log(`User athenticated ${req.userInfo}`);
+            //         req.username = req.userInfo.username;
+            //         next();
+            //     }
+            // });
         
         } else {
             res.status(403).json({message: 'Token not provided'});

@@ -26,12 +26,27 @@ app.use(cors({
 
 app.use(cookieParser());
 app.use(express.json());
+app.use(express.static(process.cwd()+"/frontend/dist/books-angular-node/"));
+
 
 app.use('/', AuthRoutes)
 app.use('/api', AuthMiddleware.checkAuth);
 app.use('/api/books', BooksRoutes);
 app.use('/api/authors', AuthorsRoutes);
 app.use('/api/users', UsersRoutes);
+
+app.get('*', (req,res) => {
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log(req.url);
+
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    console.log('LA RUTA NO COINCIDE CON ALGUN PATH DEFINIDO');
+    res.sendFile(process.cwd()+"/frontend/dist/books-angular-node/index.html")
+  });
 
 app.listen(5000, () => {
     console.log('Server listening on port 5000');

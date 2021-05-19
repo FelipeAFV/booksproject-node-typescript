@@ -1,0 +1,28 @@
+.form-element {
+    margin: 1em 0.3em;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+    align-items: center;
+
+}
+
+.form-element:not(:last-child) {
+    border-bottom: solid 2px lightgray;
+}
+
+.form-element input {
+    padding: 0.5em;
+    border: solid 2px #7e7e7e;
+    border-radius: 5px;
+}
+
+input:focus, input:active {
+    outline: none;
+}
+
+.form-container {
+    margin: 50px auto;
+    width: 30%;
+    min-width: 350px;
+}

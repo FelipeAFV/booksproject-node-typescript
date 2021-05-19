@@ -1,0 +1,10 @@
+@import url('../../../styles/form-styles.css');
+.container {
+   margin: 0 auto;
+   width: 50%;
+
+}
+
+input {
+    width: 60%;
+}

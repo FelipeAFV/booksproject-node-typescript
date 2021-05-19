@@ -1,0 +1,93 @@
+/* 
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    border-radius: 0.3em;
+    color: antiquewhite;
+    display: inline-block;
+    padding: 1em;
+}
+
+.navbar a:hover {
+    background-color: var(--main-color-trans);
+    box-shadow: -10px 0px 5px #c2b598;
+    transition: 0.5s;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    
+}
+
+
+.container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.container ul:first-child  {
+    padding-left: 0;
+} */
+
+
+.container li {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: 0.5s;
+    align-items: stretch;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: 75%;
+    padding: 0;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    padding: 0.6em; 
+    cursor: pointer;  
+    display: flex;
+    align-items: center;
+}
+
+.container li:hover {
+    background-color: var(--secondary-color);
+    box-shadow: -10px 0px 5px #c2b598;
+    transition: 0.5s;
+}
+
+.container li:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.subcontainer {
+    display: flex;
+}
+
+.navbar {
+    background-color: var(--main-color);
+    
+}

@@ -1,0 +1,30 @@
+<div class="form-container">
+    <h2>Añadir autor</h2>
+    <form [formGroup]="addForm" (ngSubmit)="addAuthor()">
+        <div class="form-element">
+            <label for="firstname">Nombre</label>
+            <input type="text"formControlName="firstname" id="firstname">
+        </div>
+        <div class="form-element">
+            <label for="lastname">Apellido</label>
+            <input type="text" formControlName="lastname" id="lastname">
+            
+        </div>
+        <div class="form-element">
+            <label for="birthdate">Fecha de nacimiento</label>
+            <input type="date" formControlName="birthdate" id="birthdate">
+            
+        </div>
+        <div class="form-element">
+            <label for="nationality">Nacionalidad</label>
+            <input type="text" formControlName="nationality" id="nationality">
+
+        </div>
+        <div class="form-element">
+
+            <button type="submit" class="button">Añadir</button>
+        </div>
+
+    </form>
+
+</div>

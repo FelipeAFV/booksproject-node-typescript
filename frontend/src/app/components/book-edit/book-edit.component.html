@@ -1,0 +1,19 @@
+<div class="form-container">
+
+    <h1>Actualizar datos</h1>
+    <form [formGroup]="updateForm" (ngSubmit)="updateBook()" class="">
+        <div class="">
+            <input type="text" class="form-control" id="id" formControlName="id" hidden>
+        </div>
+        <div class="form-element">
+            <label for="title" class="form-label">Título</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+        </div>
+        <div class="form-element">
+            <label for="publisher" class="form-label">Editorial</label>
+            <input type="text" class="form-control" id="publisher" formControlName="publisher">
+        </div>
+      <button type="submit" class="button">Actualizar</button>
+    </form>
+  </div>
+  

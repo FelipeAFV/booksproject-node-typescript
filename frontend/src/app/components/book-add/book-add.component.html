@@ -1,0 +1,35 @@
+
+<div class="container">
+
+    <div class="subcontainer">
+        <h2>Imagen</h2>
+
+    </div>
+    <form [formGroup]="addForm" (ngSubmit)="createBook()">
+        <div class="subcontainer">
+            <h2>Datos</h2>
+
+            <div class="form-element">
+                <label class="form-item" for="title">Título</label>
+                <input class="form-item" type="text" id="title" formControlName="title" > 
+            </div>
+            <div class="form-element">
+                <label class="form-item" for="title">Editorial</label>
+                <input class="form-item" type="text"  id="publisher" formControlName="publisher"> 
+            </div>
+            <div class="form-element">
+                <label class="form-item" for="authorId">Autor</label>
+                <select class="form-item" formControlName="authorId" id="authorId">
+                    <option *ngFor="let author of authors" value="{{author.id}}">{{author.firstname}}</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="button">Añadir</button>
+    </form>
+    <div class="subcontainer">
+        <h2>Reseña</h2>
+        <div class="form-element reseña">
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</div>

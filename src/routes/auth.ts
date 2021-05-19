@@ -10,4 +10,6 @@ router.route('/register').post(AuthController.register);
 
 router.route('/logout').all(AuthController.logout);
 
+router.route('/refresh').all(AuthController.refresh);
+
 export default router;

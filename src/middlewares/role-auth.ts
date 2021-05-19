@@ -5,9 +5,9 @@ class RoleAuthMiddleware {
 
     checkRole(userRoles: string[]) {
         return async (req: Request, res: Response, next: NextFunction) => {
-            const userId = req.userInfo.userId;
+            const userId = req.userInfo.id;
             const user = await UserService.getById(userId);
-    
+            console.log(user);
             if (!user) res.status(401).json({message: 'Unauthorized user'});
            
                 

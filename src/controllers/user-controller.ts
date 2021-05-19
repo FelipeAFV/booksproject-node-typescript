@@ -12,7 +12,7 @@ class UserController {
                 res.status(403).json({message: 'Invalid token'});
             } else {
                 const {userRole} = payload;
-                
+                console.log('USuarios registrado');
                 req.username = req.userInfo.username;
                 res.status(200).json(payload);
             }
